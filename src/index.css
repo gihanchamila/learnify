@@ -13,7 +13,6 @@
     --color-secondary:#525CEB;
     --color-tertiary:#BFCFE7;
     --color-quaternary:#F8EDFF;
-    --color-white: #FFFFFF;
   
   }
 
@@ -21,5 +20,14 @@
     scroll-behavior: smooth;
   }
 
+}
+
+@layer components {
+
+  .btn {
+
+    @apply inline-block py-2 px-4 rounded-full m-2 font-semibold text-sm tracking-wide transition-transform sm:text-base
+
+  }
 }
 
