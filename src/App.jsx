@@ -1,9 +1,13 @@
+import Header from "./components/Header"
+
+
 function App() {
 
   return (
     <>
-      <button className="btn btn-primary">Hello World</button>
-      <button className="btn btn-secondary">Hello World 2</button>
+    <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
+      <Header />
+    </div> 
     </>
   )
 }
