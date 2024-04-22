@@ -29,6 +29,12 @@
     @apply  py-2 px-4 rounded-full m-2 font-semibold text-sm tracking-wide transition-transform sm:text-base  relative inline-flex items-center justify-center
 
   }
+
+  .grid-background {
+
+    @apply absolute inset-0 -z-10 h-full w-full bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]
+
+  }
 }
 
 .rotate-45 {
