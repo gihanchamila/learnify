@@ -1,6 +1,6 @@
 
 const Button = ({children, className, href, onClick, white, primary, px}) => {
-    const classes = `btn ${white ? "text-white" : "text-color-primary "} ${className || ""} ${primary ? "bg-color-primary hover:bg-p-9 active:bg-color-primary" : ""} `
+    const classes = `btn ${white ? "text-white" : "text-color-primary "} ${className || ""} ${primary ? "bg-color-primary hover:bg-p-9 active:bg-color-primary" : ""}`
     const spanClasses = "relative z-10";
 
     const renderButton = () => (
@@ -16,6 +16,7 @@ const Button = ({children, className, href, onClick, white, primary, px}) => {
       );
 
     return href ? renderLink() : renderButton();
+
 }
 
 export default Button;
