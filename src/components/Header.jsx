@@ -30,9 +30,7 @@ const Header = () => {
 
 
   return (
-    
-    <div className={`fixed w-full top-0 left-0 z-50 lg:border-b lg:border-p-10 lg:backdrop-blur-lg lg:bg-white ${openNavigation ? "" :  "backdrop-blur-sm"}`}>
-      <div className="grid-background"></div> 
+    <div className={`fixed w-full top-0 left-0 z-50 lg:border-b lg:border-p-10 lg:backdrop-blur-sm ${openNavigation ? "" :  "backdrop-blur-sm"}`}>
       <div className={`flex items-center justify-center w-full lg:px-7.5 xl:px-10 max-lg:py-4`}>
         <nav className={`${openNavigation ? "flex" : "hidden"} fixed items-center justify-center top-[5rem] left-0 right-0 bottom-0 lg:static lg:flex lg:mx-auto lg:bg-transparent`}>
           <div className='relative z-10 flex flex-col items-center justify-between m-auto lg:flex-row'>

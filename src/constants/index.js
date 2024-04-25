@@ -1,3 +1,6 @@
+/* import { AcademicCapIcon, GlobeAltIcon, ChartBarIcon, ChartPieIcon, DevicePhoneMobileIcon  } from "@heroicons/react/20/solid" */
+import { featuresIcon1, featuresIcon2, featuresIcon3, featuresIcon4, featuresIcon5} from "../assets"
+
 export const navigation = [
     {
         id: "1",
@@ -33,29 +36,43 @@ export const navigation = [
 export const features = [
     {
         id: "1",
-        icon: "",
+        icon: featuresIcon1,
         title: "Personalized Learning",
         description: "Tailored quizzes based on your current IQ level ensure a customized learning experience"
     },
 
     {
         id: "2",
-        icon: "",
-        title: "Comprehensive Assessment",
+        icon: featuresIcon2,
+        title: "Assessment",
         description: "Test your IQ level across various categories including logic, mathematics, language, and more"
     },
 
     {
         id: "3",
-        icon: "",
+        icon:  featuresIcon3,
         title: "Progress Tracking",
         description: "Keep track of your improvement over time with detailed analytics and performance insights"
     },
 
     {
         id: "4",
-        icon: "",
-        title: "Accessible Anytime, Anywhere",
+        icon: featuresIcon4,
+        title: "Connect anywhere",
         description: "Learnify is available on multiple platforms, allowing you to learn on the go, whenever and wherever you want"
     },
+
+    {
+        id: "5",
+        icon: featuresIcon1,
+        title: "Interactive Lessons",
+        description: "Engage with interactive lessons and activities designed to enhance your learning experience"
+    },
+    
+    {
+        id: "6",
+        icon: featuresIcon5,
+        title: "Global Community",
+        description: "Join a global community of learners, share your achievements, and collaborate with others"
+    }
 ]
