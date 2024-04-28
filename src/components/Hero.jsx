@@ -17,7 +17,6 @@ const Hero = () => {
           <p className="body-1 max-w-3xl mx-auto mb-6 text-p-9 lg:mb-8">Our platform offers a dynamic range of courses and resources designed to fuel your curiosity and enhance your cognitive abilities. From mastering new skills to delving into fascinating subjects, Learnify provides the tools you need to expand your horizons and reach your full potential. With interactive lessons, expert guidance, and a supportive community, you'll embark on a transformative learning journey that empowers you to excel in every aspect of life. Join us today and unlock the power of your intellect</p>
           <Button primary={true} white={true}>Learn more <ArrowLongRightIcon className="h-5 w-5 inline-block ml-1" /></Button>
         </div>
-        
       </div>       
     </Section>
   )
