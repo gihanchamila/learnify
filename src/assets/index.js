@@ -6,5 +6,7 @@ import featuresIcon5 from './Features/GlobeAltIcon.svg';
 
 import download from './Download/Download.svg'
 
+import team from './About/team.svg'
 
-export {featuresIcon1, featuresIcon2, featuresIcon3, featuresIcon4, featuresIcon5, download}
+
+export {featuresIcon1, featuresIcon2, featuresIcon3, featuresIcon4, featuresIcon5, download, team}

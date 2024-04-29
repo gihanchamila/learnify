@@ -3,6 +3,7 @@ import Hero from "./components/Hero"
 import Features from './components/Features'
 import Download from "./components/Download"
 import About from "./components/About"
+import Contact from "./components/Contact"
 
 
 function App() {
@@ -14,6 +15,8 @@ function App() {
       <Hero />
       <Features />
       <Download />
+      <About />
+      <Contact />
     </div> 
     </>
   )
