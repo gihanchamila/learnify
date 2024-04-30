@@ -8,5 +8,7 @@ import download from './Download/Download.svg'
 
 import team from './About/team.svg'
 
+import contactSvg from './Contact/Contact.svg'
 
-export {featuresIcon1, featuresIcon2, featuresIcon3, featuresIcon4, featuresIcon5, download, team}
+
+export {featuresIcon1, featuresIcon2, featuresIcon3, featuresIcon4, featuresIcon5, download, team, contactSvg}

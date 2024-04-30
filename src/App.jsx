@@ -10,14 +10,20 @@ function App() {
 
   return (
     <>
-    <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
-      <Header />
-      <Hero />
-      <Features />
-      <Download />
-      <About />
-      <Contact />
-    </div> 
+   <div className="relative">
+        {/* Background div */}
+        <div className="grid-background"></div>
+
+        {/* Your content */}
+        <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden relative z-10">
+          <Header />
+          <Hero />
+          <Features />
+          <Download />
+          <About />
+          <Contact />
+        </div>
+      </div>
     </>
   )
 }
