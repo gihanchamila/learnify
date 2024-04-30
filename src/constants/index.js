@@ -1,5 +1,5 @@
 /* import { AcademicCapIcon, GlobeAltIcon, ChartBarIcon, ChartPieIcon, DevicePhoneMobileIcon  } from "@heroicons/react/20/solid" */
-import { featuresIcon1, featuresIcon2, featuresIcon3, featuresIcon4, featuresIcon5} from "../assets"
+import { featuresIcon1, featuresIcon2, featuresIcon3, featuresIcon4, featuresIcon5, facebook, telegram, twitter, instagram} from "../assets"
 
 export const navigation = [
     {
@@ -74,5 +74,35 @@ export const features = [
         icon: featuresIcon5,
         title: "Global Community",
         description: "Join a global community of learners, share your achievements, and collaborate with others"
+    }
+]
+
+export const socials = [
+    {
+        id: "1",
+        title: "Twitter",
+        iconUrl: twitter,
+        url: "#"
+    },
+
+    {
+        id: "2",
+        title: "Instagram",
+        iconUrl: instagram,
+        url: "#"
+    },
+
+    {
+        id: "3",
+        title: "Telegram",
+        iconUrl: telegram,
+        url: "#",
+    },
+
+    {
+        id: "4",
+        title: "Facebook",
+        iconUrl: facebook,
+        url: "#",
     }
 ]

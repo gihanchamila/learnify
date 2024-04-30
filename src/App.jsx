@@ -4,6 +4,7 @@ import Features from './components/Features'
 import Download from "./components/Download"
 import About from "./components/About"
 import Contact from "./components/Contact"
+import Footer from "./components/Footer"
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Download />
           <About />
           <Contact />
+          <Footer />
         </div>
       </div>
     </>

@@ -32,7 +32,7 @@
 
   .btn-secondary {
 
-    @apply border border-p-10 hover:text-white hover:bg-p-10
+    @apply border py-[11px] border-p-10 hover:text-white hover:bg-p-10
 
   }
 
