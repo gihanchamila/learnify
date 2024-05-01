@@ -9,8 +9,8 @@ const Hero = () => {
   const parallaxRef = useRef(null)
 
   return (
-    <Section id={`hero`} className={`pt-[11rem] -mt-[5.25rem]`} customPadding={true} >
-      <Stars />
+    <Section id={`hero`} className={`pt-[12rem] -mt-[5.25rem]`} customPadding={true} >
+      {/*<Stars className='sm:opacity-0 lg:visible' /> */}
       <div className='container relative' ref={parallaxRef}>
         <div className=' justify-start relative z-1 max-w-[60rem] mx-auto text-center '>
           <h1 className="h1 mb-6 ">Ignite Your Intelligence with Learnify</h1>
