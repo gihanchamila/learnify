@@ -5,7 +5,7 @@ export const navigation = [
     {
         id: "1",
         title: "Home",
-        url: "#Home",
+        url: "#hero",
     },
 
     {

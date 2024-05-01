@@ -6,7 +6,7 @@ import Button from './Button'
 
 const Contact = () => {
   return (
-    <Section id="contact" className={`pt-[12rem] -mt-[5.25rem] pb-[10rem]`} customPadding={true} >
+    <Section id={`contactUs`} className={`pt-[12rem] -mt-[5.25rem] pb-[10rem]`} customPadding={true} >
         <div className='container relative'>
             <Heading className="md:max-w-md lg:max-w-2xl" title='Contact Us'/>
             <div>
@@ -24,7 +24,7 @@ const Contact = () => {
                   <form action="" method="POST">
                     <div className="mb-5">
                       <label
-                        for="name"
+                        htmlFor="name"
                         className="mb-3 block text-base font-medium text-p-10"
                       >
                         Full Name
@@ -37,9 +37,9 @@ const Contact = () => {
                         className="w-full rounded-md border border-p-3 bg-white py-3 px-6 text-base font-medium text-p-4 outline-none focus:border-s-10 "
                       />
                     </div>
-                    <div class="mb-5">
+                    <div className="mb-5">
                       <label
-                        for="email"
+                        htmlFor="email"
                         className="mb-3 block text-base font-medium text-p-10"
                       >
                         Email Address
@@ -52,9 +52,9 @@ const Contact = () => {
                         className="w-full rounded-md border border-p-3 bg-white py-3 px-6 text-base font-medium text-p-4 outline-none focus:border-s-10 "
                       />
                     </div>
-                    <div class="mb-5">
+                    <div className="mb-5">
                       <label
-                        for="subject"
+                        htmlFor="subject"
                         className="mb-3 block text-base font-medium"
                       >
                         Subject
@@ -67,9 +67,9 @@ const Contact = () => {
                         className="w-full rounded-md border border-p-3 bg-white py-3 px-6 text-base font-mediumtext-p-10 outline-none focus:border-s-10 "
                       />
                     </div>
-                    <div class="mb-5">
+                    <div className="mb-5">
                       <label
-                        for="message"
+                        htmlFor="message"
                         className="mb-3 block text-base font-medium text-p-10"
                       >
                         Message

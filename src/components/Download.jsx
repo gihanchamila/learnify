@@ -7,7 +7,7 @@ import { GooglePlayButton, AppGalleryButton, AppStoreButton, ButtonsContainer } 
 
 const Download = () => {
   return (
-    <Section id="Download" className={`pt-[12rem] -mt-[5.25rem]`} customPadding={true}>
+    <Section id={`download`} className={`pt-[12rem] -mt-[5.25rem]`} customPadding={true}>
       <div className="container relative">
         <Heading className="md:max-w-md  lg:max-w-2xl" title='Start Learning with Learnify' />
         <div className='grid lg:grid-cols-12 sm:grid-cols-1  justify-between'>

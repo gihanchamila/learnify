@@ -5,7 +5,7 @@ import { team } from '../assets'
 
 const About = () => {
   return (
-    <Section id="about" className={`pt-[12rem] -mt-[5.25rem]`} customPadding={true} >
+    <Section id={`aboutUs`} className={`pt-[12rem] -mt-[5.25rem]`} customPadding={true} >
         <div className='container relative '>
             <Heading className="md:max-w-md lg:max-w-2xl" title='About Us' />
             <div className='lg:flex flex-col lg:text-center '>
