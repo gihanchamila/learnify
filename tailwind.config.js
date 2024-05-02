@@ -61,7 +61,7 @@ export default {
       },
 
       ".stars": {
-        "@apply w-5 h-5":
+        "@apply hidden w-5 h-5":
         {},
     },
 
