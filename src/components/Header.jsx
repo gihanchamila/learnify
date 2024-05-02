@@ -26,7 +26,6 @@ const Header = () => {
 
     enablePageScroll()
     setOpenNavigation(false)
-
   }
 
   return (
