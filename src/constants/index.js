@@ -40,6 +40,7 @@ export const navigation = [
       {
         id: "7",
         title: "Sign In",
+        url:"/learnify/login",
         onlyMobile: true,
       },
 ]

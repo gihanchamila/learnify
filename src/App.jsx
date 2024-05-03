@@ -9,13 +9,10 @@ function App() {
 
   return (
     <>
-
     <Routes>
       <Route path="/learnify/" element={<Home />}/>
       <Route path="/learnify/login" element={<Login />} />
     </Routes>
-
-      
     </>
   )
 }
