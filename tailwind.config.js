@@ -63,7 +63,12 @@ export default {
       ".stars": {
         "@apply hidden w-5 h-5":
         {},
-    },
+      },
+
+      ".input-bar": {
+        "@apply w-full rounded-md border-2 border-p-8 bg-white py-3 px-6 text-base font-medium text-p-8 outline-none focus:border-s-10  focus:border-2":
+        {},
+      },
 
       ".h1": {
         "@apply font-semibold  text-p-10 text-[2.5rem] leading-[3.25rem] md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] lg:leading-[4.0625rem] xl:text-[3.75rem] xl:leading-[4.5rem]":

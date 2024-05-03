@@ -73,8 +73,7 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full rounded-md border border-p-3 bg-white py-3 px-6 text-base font-medium text-p-4 outline-none focus:border-s-10 "
-                      />
+                        className="input-bar"/>
                     </div>
                     <div className="mb-5">
                       <label
@@ -91,7 +90,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full rounded-md border border-p-3 bg-white py-3 px-6 text-base font-medium text-p-4 outline-none focus:border-s-10 "
+                        className="input-bar"
                       />
                     </div>
                     <div className="mb-5">
@@ -109,7 +108,7 @@ const Contact = () => {
                         value={formData.subject}
                         onChange={handleChange}
                         required
-                        className="w-full rounded-md border border-p-3 bg-white py-3 px-6 text-base font-mediumtext-p-10 outline-none focus:border-s-10 "
+                        className="input-bar"
                       />
                     </div>
                     <div className="mb-5">
@@ -127,7 +126,7 @@ const Contact = () => {
                         value={formData.message}
                         onChange={handleChange}
                         required
-                        className="w-full resize-none rounded-md border border-p-3 bg-white py-3 px-6 text-base font-medium text-p-4 outline-none focus:border-s-10"
+                        className="input-bar"
                       ></textarea>
                     </div>
                     <div>
