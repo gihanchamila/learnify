@@ -34,13 +34,13 @@ export const navigation = [
 
     {
         id: "6",
-        title: "New account",
+        title: "Sign Up",
         url: "#signup",
         onlyMobile: true,
       },
       {
         id: "7",
-        title: "Sign in",
+        title: "Sign In",
         url: "#login",
         onlyMobile: true,
       },
