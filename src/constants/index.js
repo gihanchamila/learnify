@@ -30,7 +30,20 @@ export const navigation = [
         id: "5",
         title: "Contact Us",
         url: "#contactUs",
-    }
+    },
+
+    {
+        id: "6",
+        title: "New account",
+        url: "#signup",
+        onlyMobile: true,
+      },
+      {
+        id: "7",
+        title: "Sign in",
+        url: "#login",
+        onlyMobile: true,
+      },
 ]
 
 export const features = [
