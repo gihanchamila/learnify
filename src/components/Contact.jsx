@@ -3,8 +3,44 @@ import Section from './Section'
 import Heading from './Heading'
 import { contactSvg } from '../assets/index'
 import Button from './Button'
+import { useState, useEffect, useRef} from 'react'
 
 const Contact = () => {
+
+  const [isSubmitted, setIsSubmitted] = useState(false)
+  const timeoutRef = useRef(null);
+
+  const [formData, setFormData] = useState({
+    name:'',
+    email:'',
+    subject:'',
+    message:''
+  })
+
+  const handleChange = (e) => {
+    setFormData({...formData,[e.target.name]: e.target.value})
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSubmitted(true)
+
+    console.log(`form submitted`, formData)
+
+    timeoutRef.current = setTimeout(() => {
+      setIsSubmitted(false);
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    }, 5000);
+  }
+
+  useEffect(() => {
+    if (isSubmitted) {
+      const timeoutId = setTimeout(() => setIsSubmitted(false), 2000);
+      return () => clearTimeout(timeoutId); 
+    }
+  }, [isSubmitted]);
+
+
   return (
     <Section id={`contactUs`} className={`pt-[12rem] -mt-[5.25rem] pb-[10rem]`} customPadding={true} >
         <div className='container relative'>
@@ -21,11 +57,11 @@ const Contact = () => {
               <div className="lg:flex lg:flex-1 items-center justify-start lg:pl-12 ">
                 <div className="mx-auto w-full sm:mb-4">
                   <p className='text-3xl lg:pb-5 font-bold text-p-10 pb-5'>Fill the form</p>
-                  <form action="" method="POST">
+                  <form action="" method="POST" onSubmit={handleSubmit}>
                     <div className="mb-5">
                       <label
                         htmlFor="name"
-                        className="mb-3 block text-base font-medium text-p-10"
+                        className="mb-3 block text-base font-medium body-1 text-p-10"
                       >
                         Full Name
                       </label>
@@ -34,6 +70,9 @@ const Contact = () => {
                         name="name"
                         id="name"
                         placeholder="Full Name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
                         className="w-full rounded-md border border-p-3 bg-white py-3 px-6 text-base font-medium text-p-4 outline-none focus:border-s-10 "
                       />
                     </div>
@@ -49,6 +88,9 @@ const Contact = () => {
                         name="email"
                         id="email"
                         placeholder="example@domain.com"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
                         className="w-full rounded-md border border-p-3 bg-white py-3 px-6 text-base font-medium text-p-4 outline-none focus:border-s-10 "
                       />
                     </div>
@@ -64,6 +106,9 @@ const Contact = () => {
                         name="subject"
                         id="subject"
                         placeholder="Enter your subject"
+                        value={formData.subject}
+                        onChange={handleChange}
+                        required
                         className="w-full rounded-md border border-p-3 bg-white py-3 px-6 text-base font-mediumtext-p-10 outline-none focus:border-s-10 "
                       />
                     </div>
@@ -79,11 +124,14 @@ const Contact = () => {
                         name="message"
                         id="message"
                         placeholder="Type your message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
                         className="w-full resize-none rounded-md border border-p-3 bg-white py-3 px-6 text-base font-medium text-p-4 outline-none focus:border-s-10"
                       ></textarea>
                     </div>
                     <div>
-                        <Button primary={true} white={true} className={`m-0`}>Submit</Button>
+                        <Button primary={true} white={true} className={`m-0`} type="submit" disabled={isSubmitted} >{isSubmitted ? 'Submitted' : 'Submit'}</Button>
                     </div>
                   </form>
                 </div>
