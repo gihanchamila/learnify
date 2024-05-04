@@ -47,10 +47,8 @@ const Header = () => {
         </nav>
 
 
-        <Link to="/learnify/register">
-          <a className=" hidden mr-5 lg:text-xs  text-p-8 transition-colors uppercase hover:text-p-10 sm:text-xs lg:font-semibold lg:block">
-            Sign Up
-          </a>
+        <Link to="/learnify/register" className=" hidden mr-5 lg:text-xs  text-p-8 transition-colors uppercase hover:text-p-10 sm:text-xs lg:font-semibold lg:block">
+            Sign Up       
         </Link>
         
         <Link to="/learnify/login">

@@ -47,7 +47,8 @@ export default {
 
       },
       fontFamily: {
-        sans:["var(--font-Inter)", ...fontFamily.sans]
+        sans:["var(--font-Inter)", ...fontFamily.sans],
+        DM:["var(--font-DMSans)", ...fontFamily.sans]
       }
     },
   },
