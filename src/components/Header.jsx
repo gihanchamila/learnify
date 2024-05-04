@@ -5,7 +5,7 @@ import { navigation } from '../constants'
 import { useLocation } from 'react-router-dom'
 import { disablePageScroll, enablePageScroll } from 'scroll-lock'
 import MenuSvg from '../assets/MenuSvg'
-
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   const [openNavigation, setOpenNavigation] = useState(false)
@@ -48,9 +48,12 @@ const Header = () => {
         <a href="signup" className=" hidden mr-5 lg:text-xs  text-p-8 transition-colors uppercase hover:text-p-10 sm:text-xs lg:font-semibold lg:block">
           Sign Up
         </a>
-        <Button className="btn-secondary  hidden lg:flex lg:text-xs px-6 py-3 uppercase text-p-8 sm:text-xs lg:font-semibold" href="/learnify/login">
-          Sign In
-        </Button>
+        
+        <Link to="/learnify/login">
+          <Button className="btn-secondary hidden lg:flex lg:text-xs px-6 py-3 uppercase text-p-8 sm:text-xs lg:font-semibold">
+            Sign In
+          </Button>
+        </Link> 
 
         <Button className={`ml-auto lg:hidden classes hover:none` } px="px-3" onClick={toggleNavigation}>
             <MenuSvg openNavigation={openNavigation} />
