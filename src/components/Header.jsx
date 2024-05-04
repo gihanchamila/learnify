@@ -45,9 +45,13 @@ const Header = () => {
             ))}
           </div>
         </nav>
-        <a href="signup" className=" hidden mr-5 lg:text-xs  text-p-8 transition-colors uppercase hover:text-p-10 sm:text-xs lg:font-semibold lg:block">
-          Sign Up
-        </a>
+
+
+        <Link to="/learnify/register">
+          <a className=" hidden mr-5 lg:text-xs  text-p-8 transition-colors uppercase hover:text-p-10 sm:text-xs lg:font-semibold lg:block">
+            Sign Up
+          </a>
+        </Link>
         
         <Link to="/learnify/login">
           <Button className="btn-secondary hidden lg:flex lg:text-xs px-6 py-3 uppercase text-p-8 sm:text-xs lg:font-semibold">

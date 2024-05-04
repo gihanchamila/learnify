@@ -20,7 +20,7 @@ const SignInForm = () => {
         <div className="max-w-md w-full space-y-8 border-2 border-p-10 p-10 rounded-3xl bg-white">
           <BackButton />
           <div className="body-1">
-            <h1 className="text-4xl font-bold">Sign in to Learnify</h1>
+            <h1 className="text-4xl font-bold">Welcome Back</h1>
           </div>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="flex flex-col space-y-1">
