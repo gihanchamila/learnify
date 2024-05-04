@@ -3,7 +3,7 @@ import Button from './Button';
 import { motion } from 'framer-motion';
 import BackButton from './BackButton';
 
-const LoginForm = () => {
+const SignInForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -66,4 +66,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default SignInForm;

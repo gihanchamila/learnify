@@ -32,17 +32,6 @@ export const navigation = [
         url: "#contactUs",
     },
 
-    {
-        id: "6",
-        title: "Sign Up",
-        onlyMobile: true,
-      },
-      {
-        id: "7",
-        title: "Sign In",
-        url:"/learnify/login",
-        onlyMobile: true,
-      },
 ]
 
 export const features = [
