@@ -14,15 +14,15 @@ function Home() {
     <>
       <div className="relative">
         <div className="grid-background"></div>
-        <motion.div  initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.8 }}className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden relative z-10">
-          <Header />
+        <Header />
+        <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden relative z-10">
           <Hero />
           <Features />
           <Download />
           <About />
           <Contact />
           <Footer />
-        </motion.div>
+        </div>
       </div>
     </>
   )

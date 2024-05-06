@@ -24,16 +24,43 @@ const SignUpForm = () => {
         setConfirmPassword('');
     }
 
+    const mainVariant = {
+      hidden: {
+        x: "-100vw"
+      },
+      visible: {
+        x:0,
+        transition: {
+          delay:0.5
+        }
+      }
+    }
+  
+    const subVariant = {
+      hidden: {
+        x: -10,
+        opacity: 0
+      },
+  
+      visible: {
+        x: 0,
+        opacity: 1,
+        transition: {
+          delay: 1
+        }
+      }
+    }
+
 
   return (
-    <div>
+    <motion.div animate={"visible"} initial={"hidden"} variants={mainVariant}>
       <div className="flex min-h-screen items-center justify-center py-12 sm:px-6 lg:px-8 ">
-        <div className="max-w-[35rem] w-full  space-y-8 border-2 border-p-10 p-10 rounded-3xl bg-white">
+        <motion.div animate={"visible"} initial={"hidden"} variants={subVariant} className="max-w-[35rem] w-full  space-y-8 border-2 border-p-10 p-10 rounded-3xl bg-white">
         <BackButton />
           <div className="body-1">
             <h1 className="text-4xl font-bold">Create an account</h1>
           </div>
-          <form onSubmit={handleSubmit} className="space-y-4 \">
+          <form  onSubmit={handleSubmit} className="space-y-4 \">
             <div className="flex flex-col space-y-1">
               <label htmlFor="fullName" className="text-sm font-medium body-1">
                 Full Name
@@ -100,9 +127,9 @@ const SignUpForm = () => {
               <p>Already have an account? <Link to="/learnify/login" className='hover:underline-offset-2'>Sign In</Link></p>
             </div>
           </form>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

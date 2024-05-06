@@ -14,15 +14,44 @@ const SignInForm = () => {
     setEmail('');
     setPassword('');
   };
+
+  const mainVariant = {
+    hidden: {
+      x: "-100vw"
+    },
+    visible: {
+      x:0,
+      transition: {
+        delay:0.5
+      }
+    }
+  }
+
+  const subVariant = {
+    hidden: {
+      x: -10,
+      opacity: 0
+    },
+
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: 1
+      }
+    }
+  }
+
+
   return (
     <div>
-      <div className="flex min-h-screen items-center justify-center py-12 px-4 sm:px-6 lg:px-8 ">
-        <div className="max-w-md w-full space-y-8 border-2 border-p-10 p-10 rounded-3xl bg-white">
+      <motion.div animate={"visible"} initial={"hidden"} variants={mainVariant} className="flex min-h-screen items-center justify-center py-12 px-4 sm:px-6 lg:px-8 ">
+        <motion.div animate={"visible"} initial={"hidden"} variants={subVariant} className="max-w-md w-full space-y-8 border-2 border-p-10 p-10 rounded-3xl bg-white">
           <BackButton />
           <div className="body-1">
             <h1 className="text-4xl font-bold">Welcome Back</h1>
           </div>
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form  onSubmit={handleSubmit} className="space-y-4">
             <div className="flex flex-col space-y-1">
               <label htmlFor="email" className="text-sm font-medium body-1">
                 Email address
@@ -60,8 +89,8 @@ const SignInForm = () => {
               <p className='body-1 text-sm font-medium hover:underline-offset-2'>Forgot password?</p>
             </div>
           </form>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };

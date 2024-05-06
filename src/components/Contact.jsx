@@ -4,6 +4,7 @@ import Heading from './Heading'
 import { contactSvg } from '../assets/index'
 import Button from './Button'
 import { useState, useEffect, useRef} from 'react'
+import { motion } from 'framer-motion'
 
 const Contact = () => {
 
@@ -40,9 +41,8 @@ const Contact = () => {
     }
   }, [isSubmitted]);
 
-
   return (
-    <Section id={`contactUs`} className={`pt-[12rem] -mt-[5.25rem] pb-[10rem]`} customPadding={true} >
+    <Section  id={`contactUs`} className={`pt-[12rem] -mt-[5.25rem] pb-[10rem]`} customPadding={true} >
         <div className='container relative'>
             <Heading className="md:max-w-md lg:max-w-2xl" title='Contact Us'/>
             <div>
