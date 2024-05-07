@@ -47,8 +47,11 @@ export default {
 
       },
       fontFamily: {
-        sans:["var(--font-Inter)", ...fontFamily.sans],
-        DM:["var(--font-DMSans)", ...fontFamily.sans]
+        Inter:["var(--font-Inter)", ...fontFamily.sans],
+        DM:["var(--font-DMSans)", ...fontFamily.sans],
+        Inconsolata:["var(--font-Inconsolata)", ...fontFamily.sans],
+        Rubik:["var(--font-Rubik)",...fontFamily.sans],
+        WorkSans:["var(font-WorkSans)",...fontFamily.sans]
       }
     },
   },
@@ -57,7 +60,7 @@ export default {
     addComponents({
 
       ".container": {
-          "@apply  max-w-[77.5rem] mx-auto px-5 md:px-10 xl:max-w-[87.5rem]":
+          "@apply font-[Inter]  max-w-[77.5rem] mx-auto px-5 md:px-10 xl:max-w-[87.5rem]":
           {},
       },
 

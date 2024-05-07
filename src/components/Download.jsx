@@ -19,10 +19,10 @@ const Download = () => {
               <p className='body-1 pb-10'>With Learnify, embark on a personalized learning journey tailored to your needs. Test your IQ across various categories like logic, mathematics, and language. Track your progress with detailed analytics. Learnify is available on multiple platforms, allowing learning on the go. Engage with interactive lessons and join a global community to share achievements and collaborate with others.
               </p>
               <p className='body-1 pb-6'>Don't miss out on the opportunity to enhance your knowledge and skills. Download Learnify today and start your learning adventure!</p>
-              <div className='my-5 lg:w-full lg:flex lg:flex-row sm:flex-col sm:gap-4  lg:gap-4'>
-                    <GooglePlayButton theme={'dark'} className={"custom-style mb-5"} height={60}/>
-                    <AppGalleryButton theme={'dark'} className={"custom-style mb-5"} height={60} />
-                    <AppStoreButton theme={'dark'} className={"custom-style mb-5"} height={60} />
+              <div className='my-5 lg:w-full lg:flex lg:flex-row sm:flex-col sm:gap-4   lg:gap-4'>
+                    <GooglePlayButton theme={'dark'} className={"custom-style mb-5 hover:cursor-pointer"} height={60}/>
+                    <AppGalleryButton theme={'dark'} className={"custom-style mb-5 hover:cursor-pointer"} height={60} />
+                    <AppStoreButton theme={'dark'} className={"custom-style mb-5 hover:cursor-pointer"} height={60} />
               </div>
             </div>
             <div className="lg:col-start-8 lg:col sm:pb-5-span-5 sm:col-start-1 sm:col-span-12">
