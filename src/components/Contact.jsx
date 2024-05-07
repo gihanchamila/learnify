@@ -42,11 +42,11 @@ const Contact = () => {
   }, [isSubmitted]);
 
   return (
-    <Section  id={`contactUs`} className={`pt-[12rem] -mt-[5.25rem] pb-[10rem]`} customPadding={true} >
-        <div className='container relative'>
+    <Section  id={`contactUs`} className={`pt-[11rem] -mt-[5.25rem]`} customPadding={true} >
+        <div  className='container relative'>
             <Heading className="md:max-w-md lg:max-w-2xl" title='Contact Us'/>
-            <div>
-                <p className='lg:text-center body-1 pb-6'>
+            <div >
+                <p  className='lg:text-center body-1 pb-6'>
                      Have questions or feedback? We'd love to hear from you! Reach out to our support team at support@learnify.com or fill out the contact form on our website.
                 </p>
             </div>

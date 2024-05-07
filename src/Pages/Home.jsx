@@ -16,7 +16,7 @@ function Home() {
         <div className="grid-background"></div>
         <Header />
         <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden relative z-10">
-          <Hero />
+          < Hero />
           <Features />
           <Download />
           <About />
