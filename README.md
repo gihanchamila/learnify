@@ -104,9 +104,6 @@ Gihan Chamila - [LinkedIn](https://www.linkedin.com/in/gihanchamila) - algihanch
 Project Link: [https://github.com/gihanchamila/learnify](https://github.com/gihanchamila/learnify)
 
 ---
-
-This README provides a clear and comprehensive guide for anyone interested in your project, including installation instructions, usage, and contributing guidelines. Feel free to customize any section to better fit your needs.
-
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
