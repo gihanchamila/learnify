@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState} from 'react'
 import Button from './Button'
 import White from '../assets/White.svg'
 import { navigation } from '../constants'

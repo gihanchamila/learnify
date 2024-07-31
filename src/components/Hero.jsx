@@ -1,10 +1,9 @@
-import React, { useRef, useEffect } from 'react'
+import  { useRef} from 'react'
 import Section from './Section'
 import Button from './Button'
 import Stars from '../assets/Design/Stars'
-import { heroImage, primary, secondry } from '../assets/index.js'
 import { ArrowLongRightIcon,ArrowDownTrayIcon } from '@heroicons/react/16/solid'
-import { motion,useInView } from 'framer-motion'
+import { motion} from 'framer-motion'
 
 const Hero = () => {
 

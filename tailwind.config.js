@@ -55,7 +55,7 @@ export default {
       }
     },
   },
-  plugins: [plugin(function({ addUtilities, addComponents, addBase,  e, config }) {
+  plugins: [plugin(function({ addUtilities, addComponents, addBase}) {
     addBase({});
     addComponents({
 
