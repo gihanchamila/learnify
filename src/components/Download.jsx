@@ -20,9 +20,9 @@ const Download = () => {
               </p>
               <p className='body-1 pb-6'>Don't miss out on the opportunity to enhance your knowledge and skills. Download Learnify today and start your learning adventure!</p>
               <div className='my-5 lg:w-full lg:flex lg:flex-row sm:flex-col sm:gap-4   lg:gap-4'>
-                    <GooglePlayButton theme={'dark'} className={"custom-style mb-5 hover:cursor-pointer"} height={60}/>
-                    <AppGalleryButton theme={'dark'} className={"custom-style mb-5 hover:cursor-pointer"} height={60} />
-                    <AppStoreButton theme={'dark'} className={"custom-style mb-5 hover:cursor-pointer"} height={60} />
+                    <GooglePlayButton theme={'dark'} className={`custom-style mb-5 hover:cursor-pointer`} height={60}/>
+                    <AppGalleryButton theme={'dark'} className={`custom-style mb-5 hover:cursor-pointer`} height={60} />
+                    <AppStoreButton theme={'dark'} className={`custom-style mb-5 hover:cursor-pointer`} height={60} />
               </div>
             </div>
             <div className="lg:col-start-8 lg:col sm:pb-5-span-5 sm:col-start-1 sm:col-span-12">
