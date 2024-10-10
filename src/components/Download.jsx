@@ -1,10 +1,9 @@
-import React from 'react'
+
 import Section from './Section'
-import Button from './Button'
 import Heading from './Heading'
 import { download } from '../assets/index'
-import { GooglePlayButton, AppGalleryButton, AppStoreButton, ButtonsContainer } from 'react-mobile-app-button'
-import { motion } from 'framer-motion'
+import { GooglePlayButton, AppGalleryButton, AppStoreButton,} from 'react-mobile-app-button'
+
 
 const Download = () => {
 

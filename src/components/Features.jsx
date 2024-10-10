@@ -40,7 +40,7 @@ const Features = () => {
   }
  
   return (
-    <Section id={`features`} className={`pt-[11rem] -mt-[5.25rem]`} customPadding={true}>
+    <Section id={`features`} className={`pt-[11rem] -mt-[5.25rem] mb-2`} customPadding={true}>
       <motion.div  initial={{ opacity: 0, x: "-100vw" }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }} className="container relative">
         <div>
           <Heading  className="md:max-w-md lg:max-w-2xl" title='The Power of Our Platform' />

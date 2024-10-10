@@ -16,77 +16,78 @@ const SignInForm = () => {
   };
 
   const mainVariant = {
-    hidden: {
-      x: "-100vw"
-    },
+    hidden: { opacity: 0, y: 30 },
     visible: {
-      x:0,
+      opacity: 1,
+      y: 0,
       transition: {
-        delay:0.5
-      }
-    }
-  }
+        duration: 0.6,
+        ease: 'easeOut',
+      },
+    },
+  };
 
   const subVariant = {
-    hidden: {
-      x: -10,
-      opacity: 0
-    },
-
+    hidden: { opacity: 0, y: 20 },
     visible: {
-      x: 0,
       opacity: 1,
+      y: 0,
       transition: {
-        delay: 1
-      }
-    }
-  }
-
+        delay: 0.2,
+        duration: 0.6,
+        ease: 'easeOut',
+      },
+    },
+  };
 
   return (
-    <div>
-      <motion.div animate={"visible"} initial={"hidden"} variants={mainVariant} className="flex min-h-screen items-center justify-center py-12 px-4 sm:px-6 lg:px-8 ">
-        <motion.div animate={"visible"} initial={"hidden"} variants={subVariant} className="max-w-md w-full space-y-8 border-2 border-p-10 p-10 rounded-3xl bg-white">
-          <BackButton />
-          <div className="body-1">
-            <h1 className="text-4xl font-bold">Welcome Back</h1>
-          </div>
-          <form  onSubmit={handleSubmit} className="space-y-4">
-            <div className="flex flex-col space-y-1">
-              <label htmlFor="email" className="text-sm font-medium body-1">
+    <div className="min-h-screen flex items-center justify-center  px-6 py-12">
+      <motion.div
+        animate="visible"
+        initial="hidden"
+        variants={mainVariant}
+        className="w-full max-w-md space-y-8 p-8 bg-white shadow-lg rounded-3xl"
+      >
+        <BackButton />
+        <motion.div animate="visible" initial="hidden" variants={subVariant}>
+          <h1 className="text-3xl font-semibold text-gray-800 mb-4">Sign In</h1>
+          <p className="text-gray-500 mb-6">Welcome back! Please enter your credentials.</p>
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                 Email address
               </label>
               <input
                 id="email"
                 name="email"
                 type="email"
-                autoComplete="email"
                 required
-                className="appearance-none input-bar"
+                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
-            <div className="flex flex-col space-y-1">
-              <label htmlFor="password" className="text-sm font-medium body-1">
+            <div>
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
                 Password
               </label>
               <input
                 id="password"
                 name="password"
                 type="password"
-                autoComplete="current-password"
                 required
-                className="appearance-none input-bar"
+                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
             <div className="flex items-center justify-between">
-              <Button type="submit" className=".btn mx-0" primary={true} white={true}>
+              <Button type="submit" className="px-6 py-2 bg-indigo-600 text-white rounded-md shadow-md hover:bg-indigo-700 transition duration-200" primary>
                 Sign In
               </Button>
-              <p className='body-1 text-sm font-medium hover:underline-offset-2'>Forgot password?</p>
+              <a href="#" className="text-sm text-indigo-600 hover:underline">
+                Forgot password?
+              </a>
             </div>
           </form>
         </motion.div>

@@ -1,13 +1,12 @@
-import React from 'react'
+
 import Section from './Section'
 import Heading from './Heading'
 import { team } from '../assets'
-import { motion } from 'framer-motion'
 
 const About = () => {
 
   return (
-    <Section id={`aboutUs`} className={`pt-[11rem] -mt-[5.25rem]`} customPadding={true} >
+    <Section id={`aboutUs`} className={`pt-[11rem] -mt-[5.25rem] mb-2`} customPadding={true} >
         <div className='container relative '>
             <Heading className="md:max-w-md lg:max-w-2xl" title='About Us' />
             <div className='lg:flex flex-col lg:text-center '>

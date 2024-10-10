@@ -29,8 +29,8 @@ const Header = () => {
   }
 
   return (
-    <div className={`fixed w-full top-0 left-0 z-50 border-1 lg:border-b-2 bg-white lg:border-p-8 lg:backdrop-blur-sm ${openNavigation ? "" :  "backdrop-blur-sm sm:bg-white"}`}>
-      <div className={`flex items-center justify-center w-full lg:px-5.5 xl:px-10 max-lg:py-4`}>
+    <div className={`fixed w-full top-0 left-0 z-50 lg:backdrop-blur-sm ${openNavigation ? "" :  "backdrop-blur-sm sm:bg-white"}`}>
+      <div className={`flex items-center  justify-center w-full lg:px-5.5 xl:px-10 max-lg:py-4`}>
         <a href="/hero" className={`block xl:mr-[5rem] px-6 my-4 ${openNavigation ? "": "block"} `}>
           <img src={White} width={30} height={30} />
         </a>
@@ -51,7 +51,7 @@ const Header = () => {
         </Link>
         
         <Link to="/learnify/login">
-          <Button className="btn-secondary hidden lg:flex lg:text-xs px-6 py-3 uppercase text-p-8 sm:text-xs lg:font-semibold">
+          <Button className="bg-p-10 text-white hidden lg:flex lg:text-xs px-6 py-3 uppercase sm:text-xs lg:font-semibold">
             Sign In
           </Button>
         </Link> 
