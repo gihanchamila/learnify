@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate for programmatic navigation
 import Button from './Button';
 import { motion } from 'framer-motion';
 import BackButton from './BackButton';
@@ -6,11 +7,22 @@ import BackButton from './BackButton';
 const SignInForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate(); // Initialize useNavigate for navigation after successful login
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Email:', email);
-    console.log('Password:', password);
+    
+    const storedUser = JSON.parse(localStorage.getItem('registeredUser'));
+
+    // Check if the stored user data exists and matches the input
+    if (storedUser && storedUser.email === email && storedUser.password === password) {
+      alert('Login successful!');
+      // Redirect to the desired page after successful login
+      navigate('/learnify/'); // Redirect to the main page or dashboard
+    } else {
+      alert('Invalid email or password. Please try again.');
+    }
+
     setEmail('');
     setPassword('');
   };
@@ -41,7 +53,7 @@ const SignInForm = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center  px-6 py-12">
+    <div className="min-h-screen flex items-center justify-center px-6 py-12">
       <motion.div
         animate="visible"
         initial="hidden"
@@ -85,9 +97,9 @@ const SignInForm = () => {
               <Button type="submit" className="px-6 py-2 bg-indigo-600 text-white rounded-md shadow-md hover:bg-indigo-700 transition duration-200" primary>
                 Sign In
               </Button>
-              <a href="#" className="text-sm text-indigo-600 hover:underline">
+              <Link to="#" className="text-sm text-indigo-600 hover:underline">
                 Forgot password?
-              </a>
+              </Link>
             </div>
           </form>
         </motion.div>
@@ -97,3 +109,4 @@ const SignInForm = () => {
 };
 
 export default SignInForm;
+
