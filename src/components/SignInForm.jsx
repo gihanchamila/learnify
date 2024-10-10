@@ -1,28 +1,34 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate for programmatic navigation
+import { Link, useNavigate } from 'react-router-dom';
 import Button from './Button';
 import { motion } from 'framer-motion';
 import BackButton from './BackButton';
+import Toast from './Toast'; // Import the Toast component
 
 const SignInForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate(); // Initialize useNavigate for navigation after successful login
+  const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     const storedUser = JSON.parse(localStorage.getItem('registeredUser'));
 
     // Check if the stored user data exists and matches the input
     if (storedUser && storedUser.email === email && storedUser.password === password) {
-      alert('Login successful!');
+      setToastMessage('Login successful! Redirecting...');
+      setShowToast(true);
       // Redirect to the desired page after successful login
       navigate('/learnify/'); // Redirect to the main page or dashboard
     } else {
-      alert('Invalid email or password. Please try again.');
+      setToastMessage('Invalid email or password. Please try again.');
+      setShowToast(true);
     }
 
+    // Reset form fields
     setEmail('');
     setPassword('');
   };
@@ -104,9 +110,16 @@ const SignInForm = () => {
           </form>
         </motion.div>
       </motion.div>
+      
+      {/* Toast Notification */}
+      {showToast && (
+        <Toast
+          message={toastMessage}
+          onClose={() => setShowToast(false)}
+        />
+      )}
     </div>
   );
 };
 
 export default SignInForm;
-

@@ -4,20 +4,24 @@ import Button from './Button';
 import BackButton from './BackButton';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import Toast from './Toast'; // Import the Toast component
 
 const SignUpForm = () => {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [toastMessage, setToastMessage] = useState(''); // State for the toast message
+  const [showToast, setShowToast] = useState(false); // State for controlling toast visibility
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
-      alert('Passwords do not match!');
+      setToastMessage('Passwords do not match!');
+      setShowToast(true);
       return;
     }
 
@@ -29,9 +33,16 @@ const SignUpForm = () => {
     };
     localStorage.setItem('registeredUser', JSON.stringify(userData));
 
-    alert('Registration successful! You can now log in.');
-    navigate("/learnify/login")
+    // Set toast message for successful registration
+    setToastMessage('Registration successful! You can now log in.');
+    setShowToast(true);
 
+    // Navigate to the login page after a brief delay
+    setTimeout(() => {
+      navigate("/learnify/login");
+    }, 2000); // Adjust time as necessary for how long to show the toast
+
+    // Clear form fields
     setFullName('');
     setEmail('');
     setPassword('');
@@ -140,7 +151,7 @@ const SignUpForm = () => {
               </div>
             </div>
             <div className="flex items-center justify-between">
-              <Button type="submit" className="px-6 py-2 bg-indigo-600 text-white rounded-md shadow-md hover:bg-indigo-700 transition duration-200" primary>
+              <Button   type="submit" className="px-6 py-2 bg-indigo-600 text-white rounded-md shadow-md hover:bg-indigo-700 transition duration-200" primary>
                 Sign Up
               </Button>
               <p className="text-sm text-gray-600">
@@ -153,6 +164,13 @@ const SignUpForm = () => {
           </form>
         </motion.div>
       </div>
+      {/* Show toast notification if it exists */}
+      {showToast && (
+        <Toast 
+          message={toastMessage} 
+          onClose={() => setShowToast(false)}
+        />
+      )}
     </motion.div>
   );
 };
