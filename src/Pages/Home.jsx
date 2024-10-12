@@ -8,13 +8,13 @@ import Footer from "../components/Footer"
 import { motion } from "framer-motion"
 
 
-function Home() {
+function Home( {isLoggedIn, onLogout }) {
 
   return (
     <>
       <div className="relative">
         <div className="grid-background"></div>
-        <Header />
+        <Header isLoggedIn={isLoggedIn} onLogout={onLogout} />
         <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden relative z-10">
           < Hero />
           <Features />
