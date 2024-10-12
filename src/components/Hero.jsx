@@ -69,11 +69,11 @@ const Hero = () => {
     <div id="hero" className="relative pt-[10.7rem] -mt-[5.25rem] bg-gradient-radial bg-gradient-to-r from-white via-blue-50 to-white pb-[11rem] z-10">
       <Stars />
       {/* Background Images */}
-      <div>
+      <div className='hidden lg:block'>
       <motion.img
         src={heroImage1}
         alt="First Hero Image"
-        className="absolute -bottom-[5rem] -left-[22.5rem] w-[62%] h-auto opacity-70 drop-shadow-lg" 
+        className="absolute -bottom-[5rem] -left-[22.5rem] w-[62%] h-auto opacity-70 drop-shadow-lg " 
         initial="hidden"
         animate="visible"
         variants={imageVariant1}
