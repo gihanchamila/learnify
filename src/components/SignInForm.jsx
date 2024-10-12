@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import Button from './Button';
 import { motion } from 'framer-motion';
 import BackButton from './BackButton';
-import Toast from './Toast'; // Import the Toast component
+import Toast from './Toast'; 
 
 const SignInForm = ({ onLogin }) => {
   const [email, setEmail] = useState('');
@@ -19,7 +19,7 @@ const SignInForm = ({ onLogin }) => {
 
     // Check if the stored user data exists and matches the input
     if (storedUser && storedUser.email === email && storedUser.password === password) {
-      setToastMessage('Login successful! Redirecting...');
+      setToastMessage('Login successful!');
       setShowToast(true);
       onLogin(); 
       navigate('/learnify/home'); 
