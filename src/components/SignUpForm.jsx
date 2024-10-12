@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import Button from './Button';
 import BackButton from './BackButton';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import Toast from './Toast'; // Import the Toast component
+import Toast from './Toast'; 
+
 
 const SignUpForm = () => {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [toastMessage, setToastMessage] = useState(''); // State for the toast message
-  const [showToast, setShowToast] = useState(false); // State for controlling toast visibility
+  const [toastMessage, setToastMessage] = useState('');
+  const [showToast, setShowToast] = useState(false);
 
   const navigate = useNavigate();
 
@@ -25,7 +25,6 @@ const SignUpForm = () => {
       return;
     }
 
-    // Store user data in local storage
     const userData = {
       fullName,
       email,
@@ -33,16 +32,13 @@ const SignUpForm = () => {
     };
     localStorage.setItem('registeredUser', JSON.stringify(userData));
 
-    // Set toast message for successful registration
     setToastMessage('Registration successful! You can now log in.');
     setShowToast(true);
 
-    // Navigate to the login page after a brief delay
     setTimeout(() => {
       navigate("/learnify/login");
-    }, 2000); // Adjust time as necessary for how long to show the toast
+    }, 2000);
 
-    // Clear form fields
     setFullName('');
     setEmail('');
     setPassword('');
@@ -76,7 +72,7 @@ const SignUpForm = () => {
 
   return (
     <motion.div animate="visible" initial="hidden" variants={mainVariant}>
-      <div className="flex min-h-screen items-center justify-center  px-6 py-12">
+      <div className="flex min-h-screen items-center justify-center px-6 py-12">
         <motion.div
           animate="visible"
           initial="hidden"
@@ -91,67 +87,77 @@ const SignUpForm = () => {
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Form fields for Full Name, Email, Password, and Confirm Password */}
             <div className="flex flex-col sm:flex-row sm:space-x-4">
-              <div className="flex-1">
+              <div className="flex-1 space-y-2">
                 <label htmlFor="fullName" className="block text-sm font-medium text-gray-700">
                   Full Name
                 </label>
-                <input
-                  id="fullName"
-                  name="fullName"
-                  type="text"
-                  required
-                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                  value={fullName}
-                  onChange={(e) => setFullName(e.target.value)}
-                />
+                <div className="flex items-center rounded-md">
+                  <input
+                    id="fullName"
+                    name="fullName"
+                    type="text"
+                    required
+                    className="border border-gray-300 w-full px-4 py-2 sm:text-sm rounded-md"
+                    value={fullName}
+                    onChange={(e) => setFullName(e.target.value)}
+                  />
+                </div>
               </div>
-              <div className="flex-1">
+              <div className="flex-1 space-y-2">
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                   Email Address
                 </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  required
-                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
+                <div className="flex items-center rounded-md">
+               
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    className="border border-gray-300 w-full px-4 py-2 sm:text-sm rounded-md"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row sm:space-x-4">
-              <div className="flex-1">
+              <div className="flex-1 space-y-2">
                 <label htmlFor="password" className="block text-sm font-medium text-gray-700">
                   Password
                 </label>
-                <input
-                  id="password"
-                  name="password"
-                  type="password"
-                  required
-                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
+                <div className="flex items-center rounded-md">
+                  <input
+                    id="password"
+                    name="password"
+                    type="password"
+                    required
+                    className="border border-gray-300 w-full px-4 py-2 sm:text-sm rounded-md"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                </div>
               </div>
-              <div className="flex-1">
+              <div className="flex-1 space-y-2">
                 <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
                   Confirm Password
                 </label>
-                <input
-                  id="confirmPassword"
-                  name="confirmPassword"
-                  type="password"
-                  required
-                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                  value={confirmPassword}
-                  onChange={(e) => setConfirmPassword(e.target.value)}
-                />
+                <div className="flex items-center rounded-md">
+
+                  <input
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    type="password"
+                    required
+                    className="border border-gray-300 w-full px-4 py-2 sm:text-sm rounded-md"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                  />
+                </div>
               </div>
             </div>
             <div className="flex items-center justify-between">
-              <Button   type="submit" className="bg-color-secondary text-white hidden lg:flex  px-6 py-3 " >
+              <Button type="submit" className="bg-color-secondary text-white  flex px-6 py-3">
                 Sign Up
               </Button>
               <p className="text-sm text-gray-600">

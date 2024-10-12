@@ -29,7 +29,7 @@ const Header = ({ isLoggedIn, onLogout }) => {
   };
 
   return (
-    <div className={`fixed w-full top-0 left-0 z-50 lg:backdrop-blur-sm ${openNavigation ? "" : "backdrop-blur-sm sm:bg-white"}`}>
+    <div className={`fixed w-full top-0 left-0 z-50 lg:backdrop-blur -sm ${openNavigation ? "" : "backdrop-blur-sm sm:bg-white"}`}>
       <div className={`flex items-center justify-center w-full lg:px-5.5 xl:px-10 max-lg:py-4`}>
         <a href="/hero" className={`block xl:mr-[5rem] px-6 my-4 ${openNavigation ? "" : "block"}`}>
           <img src={White} width={30} height={30} alt="Logo" />

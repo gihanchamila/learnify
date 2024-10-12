@@ -23,6 +23,9 @@ const SignInForm = ({ onLogin }) => {
       setShowToast(true);
       onLogin(); 
       navigate('/learnify/home'); 
+    } else {
+      setToastMessage('Invalid email or password.');
+      setShowToast(true);
     }
 
     // Reset form fields
@@ -97,7 +100,7 @@ const SignInForm = ({ onLogin }) => {
               />
             </div>
             <div className="flex items-center justify-between">
-              <Button type="submit" className="bg-color-secondary text-white hidden lg:flex  px-6 py-3" primary>
+              <Button type="submit" className="bg-color-secondary text-white flex px-6 py-3" primary>
                 Sign In
               </Button>
               <Link to="#" className="text-sm text-indigo-600 hover:underline">
@@ -105,9 +108,19 @@ const SignInForm = ({ onLogin }) => {
               </Link>
             </div>
           </form>
+
+          {/* Link to Register if not registered */}
+          <div className="mt-4 text-center">
+            <p className="text-sm text-gray-600">
+              Don't have an account?{' '}
+              <Link to="/learnify/register" className="text-indigo-600 hover:underline">
+                Register here
+              </Link>
+            </p>
+          </div>
         </motion.div>
       </motion.div>
-      
+
       {/* Toast Notification */}
       {showToast && (
         <Toast
