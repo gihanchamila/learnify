@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import BackButton from './BackButton';
 import Toast from './Toast'; // Import the Toast component
 
-const SignInForm = () => {
+const SignInForm = ({ onLogin }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showToast, setShowToast] = useState(false);
@@ -21,11 +21,8 @@ const SignInForm = () => {
     if (storedUser && storedUser.email === email && storedUser.password === password) {
       setToastMessage('Login successful! Redirecting...');
       setShowToast(true);
-      // Redirect to the desired page after successful login
-      navigate('/learnify/'); // Redirect to the main page or dashboard
-    } else {
-      setToastMessage('Invalid email or password. Please try again.');
-      setShowToast(true);
+      onLogin(); 
+      navigate('/learnify/home'); 
     }
 
     // Reset form fields
