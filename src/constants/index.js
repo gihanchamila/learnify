@@ -30,7 +30,8 @@ export const navigation = [
         id: "5",
         title: "Contact Us",
         url: "#contactUs",
-    }
+    },
+
 ]
 
 export const features = [

@@ -15,5 +15,9 @@ import telegram from './Footer/Telegram.svg'
 import instagram from './Footer/Instagram.svg'
 import twitter from './Footer/Twitter.svg'
 
+import heroImage from "./Hero/HeroImage.svg"
+import primary from "./Hero/Primary.png"
+import secondry from "./Hero/Secondry.png"
 
-export {featuresIcon1, featuresIcon2, featuresIcon3, featuresIcon4, featuresIcon5, download, team, contactSvg, facebook, telegram, instagram, twitter}
+
+export {featuresIcon1, featuresIcon2, featuresIcon3, featuresIcon4, featuresIcon5, download, team, contactSvg, facebook, telegram, instagram, twitter, heroImage, primary, secondry}

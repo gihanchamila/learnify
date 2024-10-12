@@ -1,4 +1,5 @@
 
+
 const Button = ({children, className, href, onClick, white, primary, px}) => {
     const classes = `btn ${white ? "text-white" : "text-color-primary"} ${className || ""} ${primary ? "bg-color-secondary hover:bg-s-9 active:bg-color-secondary" : ""}`
     const spanClasses = "relative z-10";
@@ -19,4 +20,7 @@ const Button = ({children, className, href, onClick, white, primary, px}) => {
 
 }
 
-export default Button;
+
+export default Button
+
+

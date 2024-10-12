@@ -1,28 +1,19 @@
-import Header from "./components/Header"
-import Hero from "./components/Hero"
-import Features from './components/Features'
-import Download from "./components/Download"
-import About from "./components/About"
-import Contact from "./components/Contact"
-import Footer from "./components/Footer"
-
+import Home from "./Pages/Home"
+import Login from "./Pages/Login"
+import { Route, Router, Routes } from "react-router-dom"
+import Register from "./Pages/Register"
+import { Navigate } from "react-router-dom"
 
 function App() {
 
   return (
     <>
-   <div className="relative">
-        <div className="grid-background"></div>
-        <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden relative z-10">
-          <Header />
-          <Hero />
-          <Features />
-          <Download />
-          <About />
-          <Contact />
-          <Footer />
-        </div>
-      </div>
+    <Routes>
+      <Route path="/learnify/register" element={<Register />} />
+      <Route path="/learnify/" element={<Home />}/>
+      <Route path="/learnify/login" element={<Login />} />
+      <Route path="/" element={<Navigate to="/learnify/register" replace />} />
+    </Routes>
     </>
   )
 }
