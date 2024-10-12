@@ -59,7 +59,7 @@ const Hero = () => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className={letter === 'L' ? 'text-highlight' : ''} // Highlight the first letter of "Learnify"
+                  className={letter === 'L' ? 'text-highlight' : ''} 
                 >
                   {letter}
                 </motion.span>

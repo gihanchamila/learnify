@@ -100,7 +100,7 @@ const SignInForm = () => {
               />
             </div>
             <div className="flex items-center justify-between">
-              <Button type="submit" className="px-6 py-2 bg-indigo-600 text-white rounded-md shadow-md hover:bg-indigo-700 transition duration-200" primary>
+              <Button type="submit" className="bg-color-secondary text-white hidden lg:flex  px-6 py-3" primary>
                 Sign In
               </Button>
               <Link to="#" className="text-sm text-indigo-600 hover:underline">

@@ -51,7 +51,7 @@ const Header = () => {
         </Link>
         
         <Link to="/learnify/login">
-          <Button className="bg-p-10 text-white hidden lg:flex lg:text-xs px-6 py-3 uppercase sm:text-xs lg:font-semibold">
+          <Button className="bg-color-secondary text-white hidden lg:flex lg:text-xs px-6 py-3 uppercase sm:text-xs lg:font-semibold">
             Sign In
           </Button>
         </Link> 

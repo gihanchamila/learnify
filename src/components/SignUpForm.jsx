@@ -76,7 +76,7 @@ const SignUpForm = () => {
 
   return (
     <motion.div animate="visible" initial="hidden" variants={mainVariant}>
-      <div className="flex min-h-screen items-center justify-center bg-gray-100 px-6 py-12">
+      <div className="flex min-h-screen items-center justify-center  px-6 py-12">
         <motion.div
           animate="visible"
           initial="hidden"
@@ -151,7 +151,7 @@ const SignUpForm = () => {
               </div>
             </div>
             <div className="flex items-center justify-between">
-              <Button   type="submit" className="px-6 py-2 bg-indigo-600 text-white rounded-md shadow-md hover:bg-indigo-700 transition duration-200" primary>
+              <Button   type="submit" className="bg-color-secondary text-white hidden lg:flex  px-6 py-3 " >
                 Sign Up
               </Button>
               <p className="text-sm text-gray-600">
